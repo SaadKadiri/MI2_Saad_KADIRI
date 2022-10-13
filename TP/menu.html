@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Menu</title>
 </head>
 <body>
     <H1>Agence voyages Grenoble</H1>
     <hr>
-    <nav>
-        <h2>Menu</h2>
+    <h2>Menu</h2>
+    
+    <nav id="nav_bar">
+        <a href="Accueil.html">Accueil</a> 
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div> 
+        
         <a href="menu.html">Menu</a> <a href="services.html">Services</a> <a href="destinations.html">Destinations</a>
         <a href="visiteVirtuelAudio.html">Visite virtuelle(audio)</a> <a href="visiteVirtuelVideo.html">Visite
             virtuelle(vidéo)</a> <a href="contact.html">Contact</a>
-    </nav>
-    <div>
-        <ul>
-            <li>Connexion</li>
-            <li>Recherche</li>
-            <li>Réservation</li>
-            <li>Promotions</li>
-        </ul>
-    </div>
-</body>
-</html>
+        </nav>
+        
+        
+        <div >
+            <ul id="menu_ul">
+                <li><a> Connexion </a></li>
+                <li><a>Recherche</a></li>
+                <li><a>Réservation</a></li>
+                <li><a>Promotions</a></li>
+            </ul>
+        </div>
+    </body>
+    </html>
