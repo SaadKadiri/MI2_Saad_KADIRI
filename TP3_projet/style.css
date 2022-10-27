@@ -95,26 +95,28 @@ h3{
     width: 100%;
   }
 
-#destinations_div th{
+thead{
     list-style: none;
     margin: 10px;
     padding: 10px;
     width: 200px;
     background-color: lightblue;   
+    text-align: center;
+    font-weight: bold;
 }
 
 
-#destinations_div tr{
+tbody tr{
     background: white ;
 }
-#destinations_div tr:nth-child(even) td:not(.button) {
+tbody tr:nth-child(even) td:not(.button) {
     background: #f1f1f1;
 }
-#destinations_div tr:hover td:not(.button){
+tbody tr:hover td:not(.button){
     background: lightblue;
 }
 
-#destinations_div td:not(.button){
+tbody td:not(.button){
         list-style: none;
         margin: 10px;
         padding: 0;
@@ -126,7 +128,7 @@ h3{
 
 
 
-#destinations_div td button{
+tbody td button{
     display: inline-block;
     padding: 15px 25px;
     margin: 10px;;
@@ -140,19 +142,19 @@ h3{
     font-family: 'Courier New', Courier, monospace;
  }
 
- #destinations_div td button:hover {
+ tbody td button:hover {
 background-color: grey;
 color:white
 }
 
-#destinations_div td button:active {
+tbody td button:active {
   background-color: grey;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-#destinations_div td img{
-    width: 300px;
+tbody td img{
+    width: 100%;
     height: 200px;
 }
 
