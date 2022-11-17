@@ -138,9 +138,12 @@ function afficheDestination(){
     
 }
 
-function onclickValider() {
-    const test = new Destinations("Brésil","../Media/imgBresil","Circuit favellas, hôtel 4*","Lorem ipsum dolor sit amet","2000 €");
-    destination.push(test)
+function onclickValider(values) {
+    console.log(values);
+
+    
+const test = new Destinations(...values);
+destination.push(test)
 
 afficheDest(destination);
 
