@@ -89,7 +89,8 @@ if(document.getElementsByTagName('thead').length <= 1) {
         row.insertCell(2).innerHTML = destination[i].promotion;
         row.insertCell(3).innerHTML = destination[i].offre;
         row.insertCell(4).innerHTML = destination[i].prix; 
-        row.insertCell(5).innerHTML = "<button> Découvrir</button>"
+        row.insertCell(5).innerHTML = "<button onclick='onclickSupprimer()'> Supprimer</button>" + "<button onclick='onclickModifier()'> Modifier</button>"
+
         
     }
 
@@ -147,6 +148,20 @@ destination.push(test)
 
 afficheDest(destination);
 
+}
+
+function onclickSupprimer(values) {
+butt = document.getE
+destination.splice(values,1);
+
+afficheDest(destination);
+
+}
+
+
+function onclickModifier() {
+const td = getElementsByTagName('td');
+td.innerHTML = "test";
 }
 
 
