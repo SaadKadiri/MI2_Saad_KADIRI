@@ -218,3 +218,264 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+H1{
+  color: #111; font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center; 
+}
+h2{
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
+h3{
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center;
+}
+#nav_bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 99%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+#nav_bar a {
+  /*float: left;
+  display: block;*/
+  padding: 14px 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+#nav_bar a:hover {
+  background-color: #111;
+} 
+
+#menu_ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+
+}
+
+#menu_ul li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#menu_ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+#services_ol {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+#services_ol li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#services_ol li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+table{
+  width: 100%;
+}
+
+#destinations_div th{
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  background-color: lightblue;   
+}
+
+
+#destinations_div tr{
+  background: white ;
+}
+#destinations_div tr:nth-child(even) td:not(.button) {
+  background: #f1f1f1;
+}
+#destinations_div tr:hover td:not(.button){
+  background: lightblue;
+}
+
+#destinations_div td:not(.button){
+      list-style: none;
+      margin: 10px;
+      padding: 0;
+      width: 200px;
+      font-family: sans-serif;
+      text-align: center;
+      border: 1px solid lightblue;
+      }
+
+
+
+#destinations_div td button{
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 10px;;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 9px #999;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#destinations_div td button:hover {
+background-color: grey;
+color:white
+}
+
+#destinations_div td button:active {
+background-color: grey;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+#destinations_div td img{
+  width: 300px;
+  height: 200px;
+}
+
+#nav{
+position: fixed;
+width: 100%;
+}
+
+#nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+width: 98%;
+display: flex;
+justify-content: space-between;
+top: 0;
+/*position: fixed;*/
+
+}
+
+#nav li {
+float: left;
+}
+
+
+li a, .dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+background-color: red;
+}
+
+li.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+form input[type=text], textarea, [type=email],[type=tel] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+form input[type=button], input[type=submit], input[type=reset] {
+background-color: #04AA6D;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+#btn {
+background-color: #3e9172;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+box-shadow: 0 9px #04AA6D;
+}
+#btn:hover {
+background-color: rgb(71, 190, 71);
+color:white
+}
+
+#btn:active {
+  background-color: rgb(71, 190, 71);
+  box-shadow: 0 5px #04AA6D;
+  transform: translateY(4px);
+}
+
+input {
+display: flex;
+}

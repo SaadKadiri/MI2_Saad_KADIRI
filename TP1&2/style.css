@@ -218,3 +218,43 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+form input[type=text], textarea, [type=email],[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+form input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#btn {
+  background-color: #3e9172;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 9px #04AA6D;
+}
+#btn:hover {
+  background-color: rgb(71, 190, 71);
+  color:white
+  }
+  
+#btn:active {
+    background-color: rgb(71, 190, 71);
+    box-shadow: 0 5px #04AA6D;
+    transform: translateY(4px);
+  }
+
+input {
+  display: flex;
+}
