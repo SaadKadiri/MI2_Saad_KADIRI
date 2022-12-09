@@ -7,66 +7,6 @@ class Destinations {
         this.prix = prix;
     }
 
-        /*
-     afficheDest(){
-        var tableau  = document.getElementById("body");
-        
-        var table = document.createElement("table");
-        var thead = document.createElement("thead");
-        var th = document.createElement("th");
-        var th2 = document.createElement("th");
-        var th3 = document.createElement("th");
-        var th4 = document.createElement("th");
-        var th5 = document.createElement("th");
-        var tbody = document.createElement("tbody");
-        var tr = document.createElement("tr");
-        var td = document.createElement('td');
-        var td2 = document.createElement('td');
-        var td3 = document.createElement('td');
-        var td4 = document.createElement('td');
-        var td5 = document.createElement('td');
-    
-        var img = document.createElement('img');
-        var btn = document.createElement('button')
-        img.src = this.image;
-        img.alt = this._nom;
-    
-    
-    
-        var destination = document.createTextNode(this.destination);
-        var image = document.createTextNode(this.image);
-        var promotion = document.createTextNode(this.promotion);
-        var offre = document.createTextNode(this.offre);
-        var prix = document.createTextNode(this.prix);
-    
-        td.appendChild(destination);
-        td2.appendChild(image);
-        td3.appendChild(promotion);
-        td4.appendChild(offre);
-        td4.appendChild(prix);
-        td5.appendChild(btn);
-    
-        tr.appendChild(th);
-        tr.appendChild(th2);
-        tr.appendChild(th3);
-        tr.appendChild(th4);
-        tr.appendChild(th5);
-    
-        thead.appendChild(tr);
-        table.appendChild(thead);
-    
-        tr.appendChild(td);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-    
-        tbody.appendChild(tr);
-        table.appendChild(tbody);
-    
-        tableau.appendChild(table);
-    }
-    */
 }
 
 var espagne = new Destinations("Espagne","../Media/imgEspagne","Circuit plage, hôtel 4*","Lorem ipsum dolor sit amet","800 €");
@@ -89,7 +29,7 @@ if(document.getElementsByTagName('thead').length <= 1) {
         row.insertCell(2).innerHTML = destination[i].promotion;
         row.insertCell(3).innerHTML = destination[i].offre;
         row.insertCell(4).innerHTML = destination[i].prix; 
-        row.insertCell(5).innerHTML = "<button onclick='onclickSupprimer()'> Supprimer</button>" + "<button onclick='onclickModifier()'> Modifier</button>"
+        row.insertCell(5).innerHTML = "<button id= 'btnn' onclick='onclickSupprimer(this)'> Supprimer</button>" + "<button id='modif' onclick='onclickModifier(this)'> Modifier</button>" + "<button id='modifierTab' onclick='onclickValiderModif(this)'> Valider</button> "
 
         
     }
@@ -100,9 +40,7 @@ if(document.getElementsByTagName('thead').length <= 1) {
         headerRow.insertCell(i).innerHTML = headers[i];
     }
   
-    //document.body.append(table);
-    //document.getElementById("body").removeChild(body.children);
-    //document.getElementById("body").replaceChildren(table);
+
     document.getElementById("body").remove();
     var g = document.createElement('div');
     g.setAttribute("id", "body");
@@ -116,7 +54,7 @@ if(document.getElementsByTagName('thead').length <= 1) {
     btn.setAttribute("onclick", "onclickAjout()");
 
     btn.innerHTML="Ajouter Destination " 
-    
+    //document.getElementById("modifierTab").hidden= true;
 
     body.appendChild(btn) 
 
@@ -151,19 +89,131 @@ afficheDest(destination);
 }
 
 function onclickSupprimer(values) {
-butt = document.getE
-destination.splice(values,1);
+    var p = values.parentNode.parentNode;
+    console.log(p.rowIndex-1,1);
+    destination.splice(p.rowIndex-1,1);
+//const btnn = document.getElementById('btnn');
+//const table = btnn.getElementsByTagName('tr');
+//destination.splice(table,1);
 
 afficheDest(destination);
 
 }
 
 
-function onclickModifier() {
-const td = getElementsByTagName('td');
-td.innerHTML = "test";
+function onclickModifier(values) {
+    if(document.getElementsByTagName('input').length <= 1) {
+    var p = values.parentNode.parentNode;
+    var modif = document.getElementById('modif');
+    var input = document.createElement("input");
+    var input2 = document.createElement("input");
+    var input3 = document.createElement("input");
+    var input4 = document.createElement("input");
+    var input5 = document.createElement("input");
+   
+    input.setAttribute('placeholder', 'Destination');
+    input2.setAttribute('placeholder', '../Media/imgEspagne.jpeg');
+    input3.setAttribute('placeholder', 'Promotion');
+    input4.setAttribute('placeholder', 'Offre');
+    input5.setAttribute('placeholder', 'Prix');
+
+    input.setAttribute('id', 'destination');
+    input2.setAttribute('id', 'image');
+    input3.setAttribute('id', 'promotion');
+    input4.setAttribute('id', 'offre');
+    input5.setAttribute('id', 'prix');
+
+
+    p.appendChild(input);
+    p.appendChild(input2);
+    p.appendChild(input3);
+    p.appendChild(input4);
+    p.appendChild(input5);
+   
+    
+
+    var validerModif = document.getElementById('modifierTab');
+    validerModif.setAttribute('type', 'submit');
+    validerModif.setAttribute('value', 'valider');
+    //validerModif.style.visibility = null;
+    console.log(destination);
+    
+    }
+    else {
+        var destination = document.getElementById("destination");
+var image = document.getElementById("image");
+var promotion = document.getElementById("promotion");
+var offre = document.getElementById("offre");
+var prix = document.getElementById("prix");
+destination.remove();
+image.remove();
+promotion.remove();
+offre.remove();
+prix.remove();
+
+    }}
+
+
+
+function newDestination(){
+var destination = document.getElementById("destination").value;
+var image = document.getElementById("image").value;
+var promotion = document.getElementById("promotion").value;
+var offre = document.getElementById("offre").value;
+var prix = document.getElementById("prix").value;
+return new Destinations(destination,image,promotion,offre,prix);
+
+}
+function test(target) {
+    dest = newDestination();
+    var p = target.parentNode.parentNode;
+    console.log(p.cells[0].firstChild);
+    console.log(dest.destination);
+    var newTdPays = p.cells[0];
+    newTdPays.innerHTML = dest.destination;
+
+
 }
 
+//edit array when click on valider
+function onclickValiderModif(values){
+dest = newDestination();
+
+let p = values.parentNode.parentNode;
+console.log(p.cells[0].firstChild);
+
+
+
+
+var newTdPays = p.cells[0];
+newTdPays.innerHTML = dest.destination;
+
+var newTdImg = p.cells[1].firstChild;
+newTdImg.setAttribute("src",dest.image);
+
+var newTdCircuit = p.cells[2];
+newTdCircuit.innerHTML = dest.promotion;
+
+var newTdHotel = p.cells[3];
+newTdHotel.innerHTML = dest.offre;
+
+var newTdTarif = p.cells[4];
+newTdTarif.innerHTML = dest.prix; 
+
+
+
+console.log(destination);
+
+console.log(p);
+
+//destination[p.rowIndex-1].image = img;
+
+//destination.splice(p.rowIndex-1,1);
+
+
+
+
+}
 
 /*
 <table>

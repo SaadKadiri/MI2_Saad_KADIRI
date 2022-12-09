@@ -45,6 +45,8 @@ valider.setAttribute("id", "btn");
 //valider.setAttribute("onclick", "onclickValider()");
 valider.innerHTML = " Valider"
 
+input2.setAttribute('placeholder', 'Exemple : ../Media/imgEspagne');
+
 input.setAttribute("type","text");
 input2.setAttribute("type","text");
 input3.setAttribute("type","text");
