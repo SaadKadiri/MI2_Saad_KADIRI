@@ -33,14 +33,11 @@ if(document.getElementsByTagName('thead').length <= 1) {
 
         
     }
-
     var header = table.createTHead();
     var headerRow = header.insertRow(0);
     for(var i = 0; i < headers.length; i++) {
         headerRow.insertCell(i).innerHTML = headers[i];
     }
-  
-
     document.getElementById("body").remove();
     var g = document.createElement('div');
     g.setAttribute("id", "body");
@@ -48,23 +45,12 @@ if(document.getElementsByTagName('thead').length <= 1) {
     var body = document.getElementById("body");
     body.innerHTML = '<br>' + '<br>' + '<br> ' + '<br>'
     body.append(table);
-    
     var btn = document.createElement('button');
     btn.setAttribute("id", "btn");
     btn.setAttribute("onclick", "onclickAjout()");
-
-    btn.innerHTML="Ajouter Destination " 
-    //document.getElementById("modifierTab").hidden= true;
-
-    body.appendChild(btn) 
-
-
-    //document.getElementById("body").replaceChildren(table);
-
-    
-    //var body = document.getElementById("body");
-    //body.appendChild = table;
-    dest = destination
+    btn.innerHTML="Ajouter Destination " ;
+    body.appendChild(btn);
+    dest = destination;
 
 
 }
@@ -92,10 +78,6 @@ function onclickSupprimer(values) {
     var p = values.parentNode.parentNode;
     console.log(p.rowIndex-1,1);
     destination.splice(p.rowIndex-1,1);
-//const btnn = document.getElementById('btnn');
-//const table = btnn.getElementsByTagName('tr');
-//destination.splice(table,1);
-
 afficheDest(destination);
 
 }
@@ -135,7 +117,6 @@ function onclickModifier(values) {
     var validerModif = document.getElementById('modifierTab');
     validerModif.setAttribute('type', 'submit');
     validerModif.setAttribute('value', 'valider');
-    //validerModif.style.visibility = null;
     console.log(destination);
     
     }
@@ -175,7 +156,6 @@ function test(target) {
 
 }
 
-//edit array when click on valider
 function onclickValiderModif(values){
 dest = newDestination();
 
@@ -205,60 +185,4 @@ newTdTarif.innerHTML = dest.prix;
 console.log(destination);
 
 console.log(p);
-
-//destination[p.rowIndex-1].image = img;
-
-//destination.splice(p.rowIndex-1,1);
-
-
-
-
 }
-
-/*
-<table>
-<thead>
-    <tr>
-        <th>Destination</th>
-        <th>Image</th>
-        <th>Promotions</th>
-        <th>Offre</th>
-        <th>Prix</th>
-    </tr>
-</thead>
-<tbody id="dest_body">
-    <tr>
-        <td>Espagne</td>
-        <td><img src="../Media/imgEspagne.jpeg"></td>
-        <td>Circuit plage, hôtel 4*</td>
-        <td>Lorem ipsum dolor sit amet</td>
-        <td>800 € </td>
-        <td class="button"><button > Découvrir</button></td>
-
-    </tr>
-    <tr>
-        <td>Maroc</td>
-        <td><img src="../Media/imgMaroc.jpeg"></td>
-        <td>Circuit Oasis, hôtel 4*</td>
-        <td>Lorem ipsum dolor sit amet</td>
-        <td>1000 €</td>
-        <td class="button"><button> Découvrir</button></td>
-
-    <tr>
-        <td>Brésil</td>
-        <td> <img src="../Media/imgBresil.jpeg"></td>
-        <td>Circuit favellas, hôtel 4*</td>
-        <td>Lorem ipsum dolor sit amet</td>
-        <td>2000 €</td>
-        <td class="button"><button> Découvrir</button></td>
-    </tr>
-    </tr>
-</tbody>
-
-</table>
-
-*/
-
-
-// class menuicheDest()
-
